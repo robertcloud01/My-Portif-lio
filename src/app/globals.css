@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-void: #000000;
+  --color-graphite: #0F0F0F;
+  --color-graphite-light: #1A1A1A;
+  --color-premium-purple: #7B4DFF;
+  --color-premium-cyan: #4DF2FF;
+
+  /* Fonts */
+  --font-heading: var(--font-space-grotesk);
+  --font-sans: var(--font-inter);
+
+  /* Background Images */
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
+
+  /* Animations */
+  --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F0F0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7B4DFF;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .5;
+  }
+}
