@@ -6,7 +6,7 @@ import { useLanguage } from "@/lib/i18n/LanguageContext";
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger, Draggable } from "gsap/all";
+import { ScrollTrigger } from "gsap/all";
 import { GlowingCard } from "@/components/ui/GlowingCard";
 import { FloatingShapes } from "@/components/ui/FloatingShapes";
 
@@ -17,33 +17,12 @@ export function Services() {
     const containerRef = useRef<HTMLElement>(null);
 
     useGSAP(() => {
-        gsap.registerPlugin(ScrollTrigger, Draggable);
+        gsap.registerPlugin(ScrollTrigger);
 
         const cards = gsap.utils.toArray<HTMLElement>(".service-card");
 
-        // Helper to start floating animation from CURRENT position
-        const startFloating = (target: any) => {
-            // We use relative values (x/y) on top of the current transform
-            // But since Draggable modifies x/y directly, we should animate TO a random relative offset
-            // Actually, to make it robust:
-            // Draggable sets 'x' and 'y' (translate).
-            // To float, we can animate 'x' and 'y' to random values relative to where they are,
-            // OR just simple random floating logic that tween to absolute coords works if we know bounds?
-            // Simpler: Just tween x/y with relative random values from current spot.
-
-            gsap.to(target, {
-                y: `+=${gsap.utils.random(-15, 15)}`,
-                x: `+=${gsap.utils.random(-10, 10)}`,
-                rotation: `+=${gsap.utils.random(-3, 3)}`,
-                duration: gsap.utils.random(2, 4),
-                ease: "sine.inOut",
-                yoyo: true,
-                repeat: -1,
-                delay: gsap.utils.random(0, 0.5)
-            });
-        };
-
-        // Initial Reveal (Stagger)
+        // Initial Reveal (Stagger) — cards stay locked in place after this,
+        // no floating or dragging.
         gsap.fromTo(cards,
             { y: 100, opacity: 0, rotateX: -15 },
             {
@@ -59,37 +38,6 @@ export function Services() {
                     end: "bottom center",
                     toggleActions: "play none none reverse",
                 },
-                onComplete: () => {
-                    // Only float/drag on larger screens — on mobile it just fights with scrolling.
-                    const isDesktop = window.innerWidth >= 768;
-                    if (!isDesktop) return;
-
-                    // Apply Draggable and Float — only to every other card, the rest stay
-                    // locked in place so the grid feels calmer instead of everything drifting.
-                    cards.forEach((card, i) => {
-                        if (i % 2 !== 0) return;
-
-                        // Initialize Draggable
-                        Draggable.create(card, {
-                            type: "x,y",
-                            edgeResistance: 0.65,
-                            bounds: containerRef.current, // Keep inside section roughly
-                            inertia: true, // Need plugin? If not available, it just won't throw. Standard Draggable allows basic momentum-ish feel usually or simple drag.
-                            onPress: function () {
-                                gsap.killTweensOf(this.target); // Stop floating when grabbed
-                                // Scale up slightly for feedback
-                                gsap.to(this.target, { scale: 1.05, duration: 0.2, boxShadow: "0 20px 50px rgba(0,0,0,0.5)", zIndex: 50 });
-                            },
-                            onRelease: function () {
-                                gsap.to(this.target, { scale: 1, duration: 0.2, boxShadow: "none", zIndex: 1 });
-                                startFloating(this.target); // Resume floating from new spot
-                            }
-                        });
-
-                        // Start initial float
-                        startFloating(card);
-                    });
-                }
             }
         );
 
@@ -125,8 +73,7 @@ export function Services() {
                 {dictionary.services.items.map((service, index) => {
                     const Icon = icons[index];
                     return (
-                        <div key={index} className="service-card opacity-0 md:touch-none md:cursor-grab md:active:cursor-grabbing">
-                            {/* touch-none only applies from md up — on mobile cards stay static so scrolling isn't hijacked */}
+                        <div key={index} className="service-card opacity-0 transition-transform duration-300 hover:-translate-y-1">
                             <GlowingCard>
                                 <div className="p-8 h-full bg-graphite/40 flex flex-col">
                                     <div className="absolute inset-0 bg-gradient-to-br from-premium-purple/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
