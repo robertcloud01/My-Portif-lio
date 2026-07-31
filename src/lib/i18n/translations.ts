@@ -151,16 +151,6 @@ export const pt = {
         in_progress: "Em Desenvolvimento",
         items: [
             {
-                title: "Porsche Experience",
-                category: "Automotive Showcase",
-                description: "Uma experiência digital cinematográfica para a Porsche, focada em performance visual, animações fluidas e design de luxo.",
-            },
-            {
-                title: "Miracle House Architecture",
-                category: "Showcase Arquitetura",
-                description: "Um santuário contemporâneo projetado para harmonizar com as colinas enevoadas. Uma aula mestre em modernismo orgânico.",
-            },
-            {
                 title: "Plataforma de Histórias Lumina",
                 category: "SaaS Full Stack",
                 description: "Uma plataforma abrangente para criadores escreverem, gerenciarem e monetizarem suas histórias animadas.",
@@ -181,14 +171,24 @@ export const pt = {
                 description: "Um showcase premium para veículos de alta performance, apresentando galerias dinâmicas e especificações detalhadas.",
             },
             {
-                title: "Aston Martin Experience",
-                category: "Luxury Showcase",
-                description: "Uma experiência digital imersiva para a marca Aston Martin, focada em elegância visual e interatividade de alto nível.",
-            },
-            {
                 title: "Ilíria Psicologia",
                 category: "Website Institucional",
                 description: "Website profissional para clínica de psicologia, com design acolhedor, apresentação da equipe e agendamento de consultas.",
+            },
+            {
+                title: "Porsche Experience",
+                category: "Automotive Showcase",
+                description: "Uma experiência digital cinematográfica para a Porsche, focada em performance visual, animações fluidas e design de luxo.",
+            },
+            {
+                title: "Miracle House Architecture",
+                category: "Showcase Arquitetura",
+                description: "Um santuário contemporâneo projetado para harmonizar com as colinas enevoadas. Uma aula mestre em modernismo orgânico.",
+            },
+            {
+                title: "Aston Martin Experience",
+                category: "Luxury Showcase",
+                description: "Uma experiência digital imersiva para a marca Aston Martin, focada em elegância visual e interatividade de alto nível.",
             },
         ],
     },
@@ -428,16 +428,6 @@ export const en: Dictionary = {
         in_progress: "In Development",
         items: [
             {
-                title: "Porsche Experience",
-                category: "Automotive Showcase",
-                description: "A cinematic digital experience for Porsche, focused on visual performance, fluid animations, and luxury design.",
-            },
-            {
-                title: "Miracle House Architecture",
-                category: "Architectural Showcase",
-                description: "A contemporary sanctuary designed to harmonize with the misty hills. A masterclass in organic modernism.",
-            },
-            {
                 title: "Lumina Story Platform",
                 category: "Full Stack SaaS",
                 description: "A comprehensive platform for creators to write, manage and monetize their animated stories.",
@@ -458,14 +448,24 @@ export const en: Dictionary = {
                 description: "A premium showcase for high-performance vehicles, featuring dynamic galleries and detailed specifications.",
             },
             {
-                title: "Aston Martin Experience",
-                category: "Luxury Showcase",
-                description: "An immersive digital experience for the Aston Martin brand, focused on visual elegance and high-level interactivity.",
-            },
-            {
                 title: "Ilíria Psicologia",
                 category: "Institutional Website",
                 description: "Professional website for a psychology clinic, featuring a welcoming design, team presentation, and appointment scheduling.",
+            },
+            {
+                title: "Porsche Experience",
+                category: "Automotive Showcase",
+                description: "A cinematic digital experience for Porsche, focused on visual performance, fluid animations, and luxury design.",
+            },
+            {
+                title: "Miracle House Architecture",
+                category: "Architectural Showcase",
+                description: "A contemporary sanctuary designed to harmonize with the misty hills. A masterclass in organic modernism.",
+            },
+            {
+                title: "Aston Martin Experience",
+                category: "Luxury Showcase",
+                description: "An immersive digital experience for the Aston Martin brand, focused on visual elegance and high-level interactivity.",
             },
         ],
     },

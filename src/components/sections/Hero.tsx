@@ -103,7 +103,7 @@ export function Hero() {
                     {dictionary.hero.badge}
                 </div>
 
-                <h1 ref={titleRef} className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tighter text-white mb-6">
+                <h1 ref={titleRef} className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tighter text-white mb-6 px-2">
                     <div className="overflow-hidden">
                         <div className="hero-title-line inline-block origin-bottom">
                             {dictionary.hero.title_prefix} <span className="text-transparent bg-clip-text bg-gradient-to-r from-premium-purple to-premium-cyan">
@@ -144,7 +144,7 @@ export function Hero() {
                     <span className="text-sm text-gray-400">{dictionary.hero.trust_rating}</span>
                 </div>
 
-                <div className="hero-desc mt-14 grid grid-cols-3 gap-4 md:gap-10 max-w-xl mx-auto opacity-0">
+                <div className="hero-desc mt-14 grid grid-cols-3 gap-2 sm:gap-4 md:gap-10 max-w-xl mx-auto opacity-0 px-2">
                     <div className="text-center">
                         <CountUp value={dictionary.hero.stat_1_value} className="text-2xl md:text-3xl font-heading font-bold text-white" />
                         <div className="text-xs md:text-sm text-gray-500 mt-1">{dictionary.hero.stat_1_label}</div>

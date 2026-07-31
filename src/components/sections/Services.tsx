@@ -60,8 +60,15 @@ export function Services() {
                     toggleActions: "play none none reverse",
                 },
                 onComplete: () => {
-                    // Apply Draggable and Float
-                    cards.forEach((card) => {
+                    // Only float/drag on larger screens — on mobile it just fights with scrolling.
+                    const isDesktop = window.innerWidth >= 768;
+                    if (!isDesktop) return;
+
+                    // Apply Draggable and Float — only to every other card, the rest stay
+                    // locked in place so the grid feels calmer instead of everything drifting.
+                    cards.forEach((card, i) => {
+                        if (i % 2 !== 0) return;
+
                         // Initialize Draggable
                         Draggable.create(card, {
                             type: "x,y",
@@ -118,7 +125,8 @@ export function Services() {
                 {dictionary.services.items.map((service, index) => {
                     const Icon = icons[index];
                     return (
-                        <div key={index} className="service-card opacity-0 touch-none cursor-grab active:cursor-grabbing"> {/* touch-none is vital for draggable on mobile */}
+                        <div key={index} className="service-card opacity-0 md:touch-none md:cursor-grab md:active:cursor-grabbing">
+                            {/* touch-none only applies from md up — on mobile cards stay static so scrolling isn't hijacked */}
                             <GlowingCard>
                                 <div className="p-8 h-full bg-graphite/40 flex flex-col">
                                     <div className="absolute inset-0 bg-gradient-to-br from-premium-purple/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

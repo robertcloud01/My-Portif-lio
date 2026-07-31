@@ -38,7 +38,7 @@ export function Footer() {
             <BigTextMarquee />
 
             <Container>
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-10 py-16">
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-x-6 gap-y-10 md:gap-10 py-12 md:py-16">
                     <div className="col-span-2 md:col-span-1 flex md:items-start">
                         <Link href="/" className="text-xl font-heading font-bold tracking-tighter text-white">
                             VALHALLAS<span className="text-premium-purple">.DEV</span>

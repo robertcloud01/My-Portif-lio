@@ -1,19 +1,5 @@
 export const projectMeta: ProjectMeta[] = [
     {
-        tags: ["Next.js", "Tailwind", "GSAP", "Framer Motion"],
-        color: "from-red-600 to-rose-900",
-        previewUrl: "https://posrche-site-exp.vercel.app/",
-        icon: "🏎️",
-        status: "completed"
-    },
-    {
-        tags: ["Next.js", "Tailwind", "GSAP", "Architecture"],
-        color: "from-stone-600 to-neutral-900",
-        previewUrl: "https://miracle-house-architect-studio.vercel.app/",
-        icon: "🏛️",
-        status: "completed"
-    },
-    {
         tags: ["Next.js", "Supabase", "AI Integration", "Stripe"],
         color: "from-[#7B4DFF] to-[#4DF2FF]",
         icon: "✨"
@@ -37,18 +23,32 @@ export const projectMeta: ProjectMeta[] = [
         icon: "🏎️"
     },
     {
-        tags: ["React", "GSAP", "Three.js", "Tailwind"],
-        color: "from-[#005943] to-[#00241a]",
-        previewUrl: "https://aston-martin-psi.vercel.app/",
-        icon: "💎",
-        status: "in-progress"
-    },
-    {
         tags: ["Next.js", "Tailwind", "Framer Motion"],
         color: "from-[#6B4C9A] to-[#2C1654]",
         previewUrl: "https://iliria-psicologia.vercel.app/",
         icon: "🧠",
         status: "completed"
+    },
+    {
+        tags: ["Next.js", "Tailwind", "GSAP", "Framer Motion"],
+        color: "from-red-600 to-rose-900",
+        previewUrl: "https://posrche-site-exp.vercel.app/",
+        icon: "🏎️",
+        status: "completed"
+    },
+    {
+        tags: ["Next.js", "Tailwind", "GSAP", "Architecture"],
+        color: "from-stone-600 to-neutral-900",
+        previewUrl: "https://miracle-house-architect-studio.vercel.app/",
+        icon: "🏛️",
+        status: "completed"
+    },
+    {
+        tags: ["React", "GSAP", "Three.js", "Tailwind"],
+        color: "from-[#005943] to-[#00241a]",
+        previewUrl: "https://aston-martin-psi.vercel.app/",
+        icon: "💎",
+        status: "in-progress"
     },
 ];
 
