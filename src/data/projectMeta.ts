@@ -64,6 +64,13 @@ export const projectMeta: ProjectMeta[] = [
         icon: "🌶️",
         status: "completed"
     },
+    {
+        tags: ["HTML5", "CSS3", "JavaScript", "Lucide Icons"],
+        color: "from-amber-600 to-neutral-900",
+        previewUrl: "https://mantovisk.vercel.app/",
+        icon: "⚖️",
+        status: "completed"
+    },
 ];
 
 export interface ProjectMeta {

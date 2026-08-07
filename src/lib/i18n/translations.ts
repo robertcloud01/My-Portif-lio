@@ -200,6 +200,11 @@ export const pt = {
                 category: "Showcase & E-Commerce",
                 description: "Experiência digital interativa para a marca Tabasco com carrossel dinâmico de produtos, jornada de sabores animada com GSAP e carrinho de compras.",
             },
+            {
+                title: "Mantovisk Advocacia",
+                category: "Website Institucional / Jurídico",
+                description: "Plataforma web sofisticada para escritório de advocacia premium, com apresentação de áreas de atuação, histórico de resultados, equipe especializada e agendamento de consultas.",
+            },
         ],
     },
     about: {
@@ -486,6 +491,11 @@ export const en: Dictionary = {
                 title: "Tabasco Brand Experience",
                 category: "Showcase & E-Commerce",
                 description: "Interactive digital experience for Tabasco featuring dynamic product carousels, GSAP animated flavor journey, and a functional shopping cart.",
+            },
+            {
+                title: "Mantovisk Law Firm",
+                category: "Institutional / Law Firm Website",
+                description: "Sophisticated web platform for a premium law firm, featuring practice areas, track record of results, specialized team profiles, and consultation scheduling.",
             },
         ],
     },
