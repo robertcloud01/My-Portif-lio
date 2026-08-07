@@ -190,6 +190,16 @@ export const pt = {
                 category: "Luxury Showcase",
                 description: "Uma experiência digital imersiva para a marca Aston Martin, focada em elegância visual e interatividade de alto nível.",
             },
+            {
+                title: "Pure Sorriso Odontologia",
+                category: "Website Odontológico",
+                description: "Plataforma web moderna e humanizada para clínica odontológica com foco em tratamentos de estética, ortodontia e implantes com agendamento direto.",
+            },
+            {
+                title: "Tabasco Brand Experience",
+                category: "Showcase & E-Commerce",
+                description: "Experiência digital interativa para a marca Tabasco com carrossel dinâmico de produtos, jornada de sabores animada com GSAP e carrinho de compras.",
+            },
         ],
     },
     about: {
@@ -466,6 +476,16 @@ export const en: Dictionary = {
                 title: "Aston Martin Experience",
                 category: "Luxury Showcase",
                 description: "An immersive digital experience for the Aston Martin brand, focused on visual elegance and high-level interactivity.",
+            },
+            {
+                title: "Pure Sorriso Dental Clinic",
+                category: "Dental / Healthcare Website",
+                description: "Modern and patient-focused web platform for a dental clinic featuring specialized aesthetic, orthodontic, and implant treatments.",
+            },
+            {
+                title: "Tabasco Brand Experience",
+                category: "Showcase & E-Commerce",
+                description: "Interactive digital experience for Tabasco featuring dynamic product carousels, GSAP animated flavor journey, and a functional shopping cart.",
             },
         ],
     },

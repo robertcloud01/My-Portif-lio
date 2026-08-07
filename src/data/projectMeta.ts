@@ -50,6 +50,20 @@ export const projectMeta: ProjectMeta[] = [
         icon: "💎",
         status: "in-progress"
     },
+    {
+        tags: ["React", "Tailwind", "TypeScript", "Vite"],
+        color: "from-cyan-500 to-teal-600",
+        previewUrl: "https://puresorriso.vercel.app/",
+        icon: "🦷",
+        status: "completed"
+    },
+    {
+        tags: ["JavaScript", "GSAP", "Lenis", "HTML5"],
+        color: "from-red-600 to-amber-700",
+        previewUrl: "https://tabasco-omega.vercel.app/",
+        icon: "🌶️",
+        status: "completed"
+    },
 ];
 
 export interface ProjectMeta {
